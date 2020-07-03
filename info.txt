@@ -1,0 +1,21 @@
+Change from this
+
+  const startWatching = async () => {
+    try {
+      await requestPermissionsAsync();
+    } catch (e) {
+      setErr(e);
+    }
+  };
+to this:
+
+  const startWatching = async () => {
+    try {
+      const { granted } = await requestPermissionsAsync();
+      if (!granted) {
+        throw new Error('Location permission not granted');
+      }
+    } catch (e) {
+      setErr(e);
+    }
+  };
