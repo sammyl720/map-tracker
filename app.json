@@ -21,6 +21,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A app that Tracks your runs on a map",
+    "githubUrl": "https://github.com/sammyl720/map-tracker"
   }
 }
